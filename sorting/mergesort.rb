@@ -23,6 +23,7 @@ def split_array(a)
 	left = a[0...mid]
 	right = a[mid..-1]
 	return left, right
+
 end
 
 # precondition: a and b are sorted
