@@ -1,4 +1,5 @@
 require './Node.rb'
+require 'pry'
 
 class List
   def initialize
@@ -13,9 +14,17 @@ class List
     # if the list is empty, add the first node
 	  if @head == nil
 	    @head = Node.new(data,nil)
+    else
+      # if the list isn't empty, add after the last node
+      # make b node
+      # make b point at the head
+      # reassign head
+      temp = @head
+      while temp.next != nil
+        temp = temp.next
+      end
+      temp.next = Node.new(data, nil)
 	  end
-    # if the list isn't empty, add after the last node
-    # TODO: this case
   end
 
   def add_at_index(index, data)
@@ -27,7 +36,14 @@ class List
   end
 
   def contains?(data)
-    # TODO Challenge: returns if the list contains data
+    temp = @head
+    while temp != nil
+      if temp.data == data
+        return true
+      end
+      temp = temp.next
+    end
+    return false
   end
 
   def to_s

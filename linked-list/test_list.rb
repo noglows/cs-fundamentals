@@ -7,3 +7,11 @@ puts x.to_s
 x.add("a")
 puts x.to_s
 puts "Is the list empty? " + x.empty?.to_s
+x.add("b")
+x.add("c")
+#x.add(0,"z") # [z][a][b][c]
+#x.delete(1) # [z][b][c]
+puts x.to_s
+
+puts x.contains?("c")
+puts x.contains?("z")
