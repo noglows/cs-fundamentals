@@ -15,3 +15,8 @@ puts x.to_s
 
 puts x.contains?("c")
 puts x.contains?("z")
+
+x.add_at_index(0,"z")
+puts x.to_s
+x.add_at_index(4,"j")
+puts x.to_s

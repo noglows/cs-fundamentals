@@ -2,6 +2,8 @@ require './Node.rb'
 require 'pry'
 
 class List
+  attr_accessor :head
+
   def initialize
 	  @head = nil
   end
@@ -27,8 +29,18 @@ class List
 	  end
   end
 
+  # NOT COMPLETE YET
   def add_at_index(index, data)
-    # TODO Challenge: add data at a specific index
+    temp = @head
+    count = 0
+    until count == index
+      #temp.next != nil
+      temp = temp.next
+      count += 1
+    end
+    #@head.data =
+    # index = 0
+    # binding.pry
   end
 
   def delete_at_index(index)
